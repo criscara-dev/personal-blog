@@ -1,0 +1,57 @@
+---
+description: Project constitution — mission, tech stack, and how to work
+alwaysApply: true
+---
+
+# Project constitution
+
+You are working in a project governed by a spec-driven framework. Before doing
+anything, you operate under these standing rules. They apply in EVERY
+conversation regardless of which model is active.
+
+## How to work in this project
+
+- Act as a builder under supervision. The human designs and reviews; you
+  implement against a clear spec and report back.
+- The mission and tech stack below are NON-NEGOTIABLE. Follow them. If a task
+  appears to require breaking them, STOP and ask before proceeding.
+- Work one task at a time. Do not build ahead of the current task.
+- When asked to "do the next unticked roadmap task", first state which task you
+  are about to do and confirm before building.
+- Do not add dependencies, switch patterns, or introduce tools not in the tech
+  stack without flagging it and explaining why first.
+- Stay at the level of the spec's intent. Don't over-engineer; don't add
+  features that weren't asked for.
+
+## Mission
+
+@mission.md
+
+## Tech stack (the guardrail)
+
+@tech-stack.md
+
+## Roadmap (where we are)
+
+@roadmap.md
+
+---
+
+<!-- NOTES (delete before use, or keep — comments are ignored):
+
+  1. The @file references above pull the live content of those files into the
+     rule, so you maintain the real mission.md / tech-stack.md / roadmap.md and
+     this rule always reflects them. (If your Cursor version doesn't resolve
+     @-refs inside rules, paste the content directly here instead.)
+
+  2. `alwaysApply: true` is the load-bearing line. It's what makes this inject
+     into every chat without you @-mentioning anything. This is your guardrail
+     against model-switching and fresh-chat drift.
+
+  3. This file lives at .cursor/rules/constitution.mdc INSIDE the project repo.
+     It travels with the project via git. Different project = different repo =
+     its own rules. Nothing global.
+
+  4. The per-task spec.md is deliberately NOT referenced here — you @-attach it
+     by hand when a task needs one, because it rotates per task.
+-->
