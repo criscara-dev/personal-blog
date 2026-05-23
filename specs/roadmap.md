@@ -23,11 +23,11 @@
       in `_data/site.json`. Acceptance: a built page reads metadata from
       `_data/site.json`; post URLs match the chosen permalink pattern
       (e.g. `/:year/:month/:day/:slug/`).
-- [ ] Set up the GitHub Actions workflow that builds with Eleventy and
+- [x] Set up the GitHub Actions workflow that builds with Eleventy and
       deploys the artifact to GitHub Pages. Acceptance: pushing to `main`
       produces a green Actions run and the built site is live at the Pages
       URL.
-- [ ] Wire the custom domain and enforce HTTPS via GitHub Pages settings
+- [x] Wire the custom domain and enforce HTTPS via GitHub Pages settings
       (CNAME file + DNS). Acceptance: the domain serves the site over HTTPS
       with a valid certificate.
 
