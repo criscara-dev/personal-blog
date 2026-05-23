@@ -6,40 +6,45 @@
 
 ## What this is
 
-<!-- One or two sentences. Plain language. What does this project DO and for whom?
-     Example: "AgentsMap is a discovery platform that helps developers find and
-     compare AI agents. Users browse, filter, and read structured comparisons." -->
+A personal blog by Cristian, covering three domains under one voice: **tech**,
+**physical practice**, and **art**. A static Eleventy site on GitHub Pages,
+deliberately text-first and minimal — modelled on the aesthetic of
+[bcantrill.dtrace.org](https://bcantrill.dtrace.org).
 
 ## Why it exists
 
-<!-- The problem it solves. Why does anyone need this? What's broken without it?
-     This is your north star when a feature decision is ambiguous — does it serve
-     this reason? If not, it's probably scope creep. -->
+A single, owned home for long-form writing across the areas I actually work
+in. Existing platforms either fragment that work across silos, bury reading
+under chrome and widgets, or hold the content hostage. This is plain markdown
+in a repo I own, on infrastructure I control, with a reading experience tuned
+for prose first and everything else second.
 
 ## Who it's for
 
-<!-- The primary user. Be specific — "solo developers evaluating agent tools"
-     is useful; "everyone" is not. -->
+- **Me, the writer** — the workflow has to make writing easy: open editor,
+  write markdown, push, done.
+- **Readers interested in any of the three domains** — friction-free,
+  fast on any device, no auth, no popups, no tracking.
 
 ## Core principles
 
-<!-- 3-5 non-negotiable rules the agent must always respect. These are about
-     PRODUCT/QUALITY, not tech (tech goes in tech-stack.md).
-     Examples:
-     - Prefer clarity over cleverness; readable code over compact code.
-     - Every user-facing feature ships with at least one test.
-     - No feature is "done" until its acceptance criteria pass.
-     - Accessibility is not optional. -->
-
--
--
--
+- **Writing-first.** The post list and the reading view are the primary UI.
+  Everything that competes with the prose gets cut.
+- **No visual noise.** No sidebars, no widgets, no social share buttons,
+  no popovers, no related-posts modules.
+- **One voice across three domains.** Tech, practice, and art live
+  side-by-side under a single brand and a single visual system.
+- **Fast and accessible.** Semantic HTML, system fonts, minimal JS, no
+  framework runtime, works on a slow phone.
+- **Owned infrastructure.** Markdown in a repo on a custom domain. No
+  vendor lock-in beyond GitHub Pages itself.
 
 ## Out of scope
 
-<!-- Just as important as what's in. What are you deliberately NOT building?
-     This stops the agent (and you) from wandering.
-     Example: "No user authentication in v1. No mobile app. No payment processing." -->
-
--
--
+- No JS frameworks (React, Vue, Svelte, etc.). Vanilla JS only, and only
+  where genuinely necessary.
+- No Google Fonts or external font CDN.
+- No analytics in v1, and nothing cookie-based ever.
+- No comments system.
+- No newsletter, no paid features, no membership.
+- No CMS — content stays as markdown files in the repo.
