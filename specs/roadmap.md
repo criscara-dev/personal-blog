@@ -47,7 +47,7 @@
       max content width) in our base SCSS, applied to our own layouts.
       Acceptance: a sample post renders with the chosen scale on both
       desktop and mobile.
-- [ ] Define light and dark colour tokens as CSS variables. Acceptance:
+- [x] Define light and dark colour tokens as CSS variables. Acceptance:
       switching theme swaps every colour without per-component overrides;
       links, borders, code blocks all adapt.
 
