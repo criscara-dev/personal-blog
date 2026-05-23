@@ -15,10 +15,10 @@
 
 ### 1.1 Repo & scaffold
 
-- [ ] Initialise the repo with Eleventy via npm. Acceptance:
+- [x] Initialise the repo with Eleventy via npm. Acceptance:
       `npx @11ty/eleventy --serve` boots locally and renders an empty index
       page from a hand-written base layout.
-- [ ] Configure `.eleventy.js` (input/output dirs, permalink pattern,
+- [x] Configure `.eleventy.js` (input/output dirs, permalink pattern,
       markdown engine) and put site metadata (title, description, author)
       in `_data/site.json`. Acceptance: a built page reads metadata from
       `_data/site.json`; post URLs match the chosen permalink pattern
