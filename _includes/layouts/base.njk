@@ -5,11 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ description or site.description }}">
     <meta name="author" content="{{ site.author.name }}">
+    <script>
+      (function () {
+        var savedTheme = localStorage.getItem("theme");
+        var preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
+        document.documentElement.setAttribute("data-theme", savedTheme || preferredTheme);
+      })();
+    </script>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #1a1a1a;
+        --muted: #666666;
+      }
+
+      :root[data-theme="dark"] {
+        --bg: #0f0f0f;
+        --fg: #e8e8e8;
+        --muted: #888888;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--fg);
+      }
+
+      button {
+        color: var(--fg);
+        background: transparent;
+        border: 1px solid var(--muted);
+      }
+    </style>
     <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
   </head>
   <body>
+    <button id="theme-toggle" type="button">DARK</button>
     <main>
       {{ content | safe }}
     </main>
+    <script src="/assets/js/theme-toggle.js" defer></script>
   </body>
 </html>

@@ -1,4 +1,6 @@
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("assets");
+
   eleventyConfig.addFilter("postPermalink", function (date, slug) {
     const postDate = new Date(date);
     const year = postDate.getUTCFullYear();

@@ -33,7 +33,7 @@
 
 ### 1.2 Site primitives
 
-- [ ] Implement the dark/light toggle in vanilla JS: persisted in
+- [x] Implement the dark/light toggle in vanilla JS: persisted in
       `localStorage`, respects `prefers-color-scheme` on first visit, applied
       before first paint to avoid FOUC. Acceptance: toggle flips theme,
       choice persists across reloads, no white flash on a hard reload in
