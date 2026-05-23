@@ -43,7 +43,7 @@
 
 ### 2.1 Typography & colour
 
-- [ ] Establish typography (system font stack, base sizes, line-height,
+- [x] Establish typography (system font stack, base sizes, line-height,
       max content width) in our base SCSS, applied to our own layouts.
       Acceptance: a sample post renders with the chosen scale on both
       desktop and mobile.
