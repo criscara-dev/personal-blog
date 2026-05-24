@@ -1,8 +1,28 @@
 module.exports = function (eleventyConfig) {
+  const allowedCategories = ["tech", "practice", "art", "other"];
+
   eleventyConfig.addPassthroughCopy("assets");
 
+  eleventyConfig.addPreprocessor("drafts", "md", function (data) {
+    if (data.draft) {
+      return false;
+    }
+  });
+
   eleventyConfig.addCollection("chronologicalPosts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("posts/*.md").sort(function (a, b) {
+    return collectionApi.getFilteredByGlob("posts/*.md").filter(function (post) {
+      return !post.data.draft;
+    }).map(function (post) {
+      const category = post.data.category;
+
+      if (Array.isArray(category) || !allowedCategories.includes(category)) {
+        throw new Error(
+          `Post "${post.inputPath}" must define one category: ${allowedCategories.join(", ")}.`,
+        );
+      }
+
+      return post;
+    }).sort(function (a, b) {
       return b.date - a.date;
     });
   });
@@ -35,6 +55,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("htmlDateString", function (date) {
     return date.toISOString().slice(0, 10);
+  });
+
+  eleventyConfig.addFilter("categoryPosts", function (posts, category) {
+    return posts.filter(function (post) {
+      return post.data.category === category;
+    });
   });
 
   return {

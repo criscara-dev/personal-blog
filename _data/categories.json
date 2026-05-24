@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "tech",
+    "label": "Tech"
+  },
+  {
+    "slug": "practice",
+    "label": "Practice"
+  },
+  {
+    "slug": "art",
+    "label": "Art"
+  },
+  {
+    "slug": "other",
+    "label": "Other"
+  }
+]

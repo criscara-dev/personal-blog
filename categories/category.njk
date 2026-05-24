@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: categories
+  size: 1
+  alias: category
+permalink: "/categories/{{ category.slug }}/"
+eleventyComputed:
+  title: "{{ category.label }}"
+eleventyExcludeFromCollections: true
+---
+
+{% set posts = collections.chronologicalPosts | categoryPosts(category.slug) %}
+
+<h1>{{ category.label }}</h1>
+
+{% if posts.length %}
+  <section class="post-list" aria-label="{{ category.label }} posts">
+  {% for post in posts %}
+    <article class="post-list-item">
+      <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>
+      <p class="post-meta">
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <span aria-hidden="true">|</span>
+        <a href="/categories/{{ post.data.category }}/">{{ post.data.category }}</a>
+      </p>
+    </article>
+  {% endfor %}
+  </section>
+{% else %}
+  <p class="muted">No posts yet.</p>
+{% endif %}

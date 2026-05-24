@@ -64,12 +64,12 @@
 
 ### 3.1 Pages & taxonomy
 
-- [ ] Define the post front-matter convention and the four mutually
+- [x] Define the post front-matter convention and the four mutually
       exclusive categories: `tech`, `practice`, `art`, `other`. Acceptance:
       a post tagged `tech` is collected and appears at `/categories/tech/`.
-- [ ] Build the About page at `/about/`. Acceptance: page renders via the
+- [x] Build the About page at `/about/`. Acceptance: page renders via the
       page layout with no sidebar and no photo requirement.
-- [ ] Author 2–3 seed posts (one per active domain) to validate the writing
+- [x] Author 2–3 seed posts (one per active domain) to validate the writing
       flow end-to-end. Acceptance: posts render correctly, category links
       work, dates display in the chosen format.
 

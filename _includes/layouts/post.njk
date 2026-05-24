@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1>{{ title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+      <span aria-hidden="true">|</span>
+      <a href="/categories/{{ category }}/">{{ category }}</a>
+    </p>
+  </header>
+  {{ content | safe }}
+</article>
