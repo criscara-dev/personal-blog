@@ -57,7 +57,7 @@
       list — H4 title with a muted date below, mirroring the bcantrill
       aesthetic. Acceptance: homepage shows only nav, post list, and footer;
       nothing else.
-- [ ] Build the navigation: `[Blog Name] | About | LIGHT/DARK`. Acceptance:
+- [x] Build the navigation: `[Blog Name] | About | LIGHT/DARK`. Acceptance:
       header is a single row, no hamburger on mobile, not sticky.
 
 ## Phase 3 — Content structure
