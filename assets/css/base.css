@@ -20,6 +20,12 @@
   --code-fg: #f0f0f0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-family: var(--font-body);
   font-size: 100%;
@@ -39,6 +45,7 @@ body {
   line-height: 1.65;
   color: var(--fg);
   background: var(--bg);
+  overflow-wrap: break-word;
 }
 
 main,
@@ -54,9 +61,20 @@ main,
 
 .site-nav {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.45rem;
   white-space: nowrap;
+}
+
+.site-nav a,
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.theme-toggle {
+  min-width: 44px;
 }
 
 main {
@@ -64,8 +82,36 @@ main {
 }
 
 .site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
   padding-block-end: 3rem;
   color: var(--muted);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--muted);
+}
+
+.social-links a:hover {
+  color: var(--fg);
+}
+
+.social-links svg {
+  display: block;
 }
 
 h1,
@@ -185,6 +231,12 @@ button:hover {
   margin-block: 0 0.2rem;
 }
 
+.post-list-item h4 a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
 .post-header {
   margin-block-end: 1.5rem;
 }
@@ -200,6 +252,9 @@ button:hover {
 }
 
 .post-meta a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: inherit;
 }
 

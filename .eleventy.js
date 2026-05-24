@@ -1,5 +1,9 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss").default;
+
 module.exports = function (eleventyConfig) {
   const allowedCategories = ["tech", "practice", "art", "other"];
+
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addPassthroughCopy("assets");
 

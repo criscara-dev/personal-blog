@@ -1,7 +1,14 @@
 {
   "title": "Personal Blog",
+  "url": "https://cristiancaratti.blog",
   "description": "Tech, physical practice, and art.",
   "author": {
     "name": "Cristian"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/cristian-caratti-00a1b7136/",
+    "github": "https://github.com/criscara-dev",
+    "x": "https://x.com/criscaratti",
+    "rss": "https://cristiancaratti.blog/feed.xml"
   }
 }

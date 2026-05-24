@@ -77,21 +77,21 @@
 
 ### 4.1 SEO, feeds, footer
 
-- [ ] Wire RSS, sitemap, and SEO meta. Use `@11ty/eleventy-plugin-rss` for
+- [x] Wire RSS, sitemap, and SEO meta. Use `@11ty/eleventy-plugin-rss` for
       the feed; hand-write the sitemap template; put SEO meta tags in the
       base layout. Acceptance: `/feed.xml` and `/sitemap.xml` are valid;
       per-page `<meta description>` and Open Graph tags are present.
-- [ ] Build the minimal footer with inline SVG icons (LinkedIn, GitHub, X,
+- [x] Build the minimal footer with inline SVG icons (LinkedIn, GitHub, X,
       RSS), gated by social keys in `_data/site.json`. Acceptance: only
       configured links appear; icons inherit `--muted` and hover to `--fg`;
       every link has an `aria-label`.
 
 ### 4.2 Quality pass
 
-- [ ] Mobile review across the homepage, a post, and the About page.
+- [x] Mobile review across the homepage, a post, and the About page.
       Acceptance: no horizontal scroll on a 360px-wide viewport; tap
       targets ≥ 44px; text remains readable.
-- [ ] Final FOUC check (theme applied before first paint via inline init
+- [x] Final FOUC check (theme applied before first paint via inline init
       in `<head>`). Acceptance: hard reload in dark mode shows no white
       flash.
 
