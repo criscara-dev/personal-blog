@@ -99,7 +99,7 @@
 
 ### 5.1 Go live
 
-- [ ] Submit the sitemap to Google Search Console and verify the domain.
+- [x] Submit the sitemap to Google Search Console and verify the domain.
       Acceptance: Search Console reports the sitemap as successfully read.
 - [ ] Announce. Acceptance: domain serves the published site, RSS works,
       first post is dated and live.
