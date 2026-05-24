@@ -95,13 +95,36 @@
       in `<head>`). Acceptance: hard reload in dark mode shows no white
       flash.
 
+### 4.3 Header & footer refinements
+
+- [x] Replace the nav site-title text link with an inline home-icon SVG
+      linking to `/`. Acceptance: the icon inherits the nav styling, remains
+      keyboard-focusable, and the link has `aria-label="Home"`.
+- [x] Replace the `LIGHT`/`DARK` text theme toggle with inline sun/moon SVG
+      icons that swap with the active theme. Acceptance: the toggle JS leaves
+      no visible text behind, the icon updates immediately on click and on
+      initial load, and the control keeps an accessible `aria-label`.
+- [x] Correct the footer attribution to read exactly `© Cristian Caratti`
+      followed by a new line reading `Powered by Eleventy`. Acceptance: the
+      two footer lines render in that order across pages.
+
+### 4.4 Nav and typography polish
+
+- [x] Rebalance the nav so the home icon stays on the left while the About
+      link and theme toggle sit on the far right. Acceptance: header remains a
+      single non-sticky row, no hamburger is introduced, and all tap targets
+      remain at least 44px.
+- [x] Update the body font stack to a more characterful Avenir-led system
+      sans-serif stack. Acceptance: no font assets, CDNs, or dependencies are
+      added; unavailable fonts fall back to the existing system sans stack.
+
 ## Phase 5 — Launch
 
 ### 5.1 Go live
 
 - [x] Submit the sitemap to Google Search Console and verify the domain.
       Acceptance: Search Console reports the sitemap as successfully read.
-- [ ] Announce. Acceptance: domain serves the published site, RSS works,
+- [x] Announce. Acceptance: domain serves the published site, RSS works,
       first post is dated and live.
 
 ---

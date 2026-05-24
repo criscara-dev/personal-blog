@@ -39,18 +39,31 @@
   <body>
     <header class="site-header">
       <nav class="site-nav" aria-label="Primary">
-        <a href="/">{{ site.title }}</a>
-        <span aria-hidden="true">|</span>
-        <a href="/about/">About</a>
-        <span aria-hidden="true">|</span>
-        <button class="theme-toggle" id="theme-toggle" type="button">DARK</button>
+        <a class="site-home-link" href="/" aria-label="Home">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M3 10.75 12 3l9 7.75v9.25a1 1 0 0 1-1 1h-5.5v-6h-5v6H4a1 1 0 0 1-1-1v-9.25z"/>
+          </svg>
+        </a>
+        <span class="site-nav-actions">
+          <a href="/about/">About</a>
+          <span aria-hidden="true">|</span>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">
+            <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </span>
       </nav>
     </header>
     <main>
       {{ content | safe }}
     </main>
     <footer class="site-footer">
-      <small>&copy; {{ site.author.name }}</small>
+      <small>&copy; Cristian Caratti<br>Powered by Eleventy</small>
       {% if site.social %}
       <nav class="social-links" aria-label="Social links">
         {% if site.social.linkedin %}
