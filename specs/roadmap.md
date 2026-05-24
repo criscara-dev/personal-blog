@@ -53,7 +53,7 @@
 
 ### 2.2 Layout
 
-- [ ] Build the homepage layout from scratch as a single chronological post
+- [x] Build the homepage layout from scratch as a single chronological post
       list — H4 title with a muted date below, mirroring the bcantrill
       aesthetic. Acceptance: homepage shows only nav, post list, and footer;
       nothing else.

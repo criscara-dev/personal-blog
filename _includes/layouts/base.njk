@@ -17,10 +17,17 @@
     <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
   </head>
   <body>
-    <button id="theme-toggle" type="button">DARK</button>
+    <header class="site-header">
+      <nav aria-label="Primary">
+        <button id="theme-toggle" type="button">DARK</button>
+      </nav>
+    </header>
     <main>
       {{ content | safe }}
     </main>
+    <footer class="site-footer">
+      <small>&copy; {{ site.author.name }}</small>
+    </footer>
     <script src="{{ "/assets/js/theme-toggle.js" | assetPath(page.url) }}" defer></script>
   </body>
 </html>
