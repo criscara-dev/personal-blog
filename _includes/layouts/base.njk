@@ -13,7 +13,7 @@
         document.documentElement.setAttribute("data-theme", savedTheme || preferredTheme);
       })();
     </script>
-    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="{{ "/assets/css/base.css" | assetPath(page.url) }}">
     <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
   </head>
   <body>
@@ -21,6 +21,6 @@
     <main>
       {{ content | safe }}
     </main>
-    <script src="/assets/js/theme-toggle.js" defer></script>
+    <script src="{{ "/assets/js/theme-toggle.js" | assetPath(page.url) }}" defer></script>
   </body>
 </html>

@@ -10,6 +10,14 @@ module.exports = function (eleventyConfig) {
     return `/${year}/${month}/${day}/${slug}/`;
   });
 
+  eleventyConfig.addFilter("assetPath", function (assetPath, pageUrl) {
+    const cleanAssetPath = assetPath.replace(/^\/+/, "");
+    const pageDepth = (pageUrl || "/").split("/").filter(Boolean).length;
+    const prefix = pageDepth === 0 ? "./" : "../".repeat(pageDepth);
+
+    return `${prefix}${cleanAssetPath}`;
+  });
+
   return {
     dir: {
       input: ".",
