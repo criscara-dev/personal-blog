@@ -3,7 +3,7 @@ title: The most interesting thing in AI right now might be the hardware.
 description: Hardware Pioneers Max 2026 — notes from a software person on edge AI, chip physics, sovereign processors, and why the constraint might no longer be the code.
 date: 2026-06-12
 category: tech
-draft: true
+draft: false
 ---
 
 Having spent most of my career on the software side — web dev, technical support, account management — I went to Hardware Pioneers Max mostly out of curiosity. I'm not the typical attendee, but edge AI was one of the dominant themes this year, and that intersection of AI and physical hardware is something I find genuinely exciting. I didn't catch everything, but the buzz was real: people building and shipping things they clearly believed in.
