@@ -24,7 +24,14 @@ The architecture: use my machine to record an audio file, run a transcription sc
 
 A bit more detail: the pipeline is simple once it's running. Record audio to a .wav file, transcribe it locally with Whisper (I used the faster-whisper implementation), then summarize the transcript with a small open-source model running through Ollama; I'm using a 2GB Llama 3.2 build, small enough to run comfortably in the background.
 
-![Meeting recorder pipeline diagram](/assets/img/meeting_recorder_pipeline_diagram.svg)
+```mermaid
+flowchart LR
+    A[Your mic] --> C[BlackHole]
+    B[System audio] --> C
+    C --> D[.wav file]
+    D --> E[faster-whisper]
+    E --> F[Ollama · Llama 3.2]
+```
 
 The trickier part was audio routing, which is where BlackHole comes in. macOS doesn't let you casually intercept audio between apps, so BlackHole acts as a virtual audio driver, basically a pipe you can route sound through. I use it twice, for two different jobs:
 

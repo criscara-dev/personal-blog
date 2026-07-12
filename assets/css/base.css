@@ -294,3 +294,8 @@ button:hover {
   height: auto;
   margin-block: 1.5rem;
 }
+
+.post .mermaid {
+  margin-block: 1.5rem;
+  overflow-x: auto;
+}

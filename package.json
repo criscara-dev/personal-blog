@@ -20,6 +20,7 @@
   "homepage": "https://github.com/criscara-dev/personal-blog#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.5",
-    "@11ty/eleventy-plugin-rss": "^3.0.0"
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "mermaid": "^11.16.0"
   }
 }

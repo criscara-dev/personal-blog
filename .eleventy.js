@@ -6,6 +6,24 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/mermaid/dist/mermaid.min.js": "assets/js/mermaid.min.js",
+  });
+
+  eleventyConfig.amendLibrary("md", function (mdLib) {
+    const defaultFence = mdLib.renderer.rules.fence;
+
+    mdLib.renderer.rules.fence = function (tokens, idx, options, env, self) {
+      const token = tokens[idx];
+      const info = token.info ? token.info.trim() : "";
+
+      if (info === "mermaid") {
+        return `<pre class="mermaid">${token.content.trim()}\n</pre>\n`;
+      }
+
+      return defaultFence(tokens, idx, options, env, self);
+    };
+  });
 
   eleventyConfig.addPreprocessor("drafts", "md", function (data) {
     if (data.draft) {
