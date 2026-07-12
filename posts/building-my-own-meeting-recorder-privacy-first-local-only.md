@@ -23,9 +23,8 @@ So, what did I build in an afternoon? (And I’m not bragging, nowadays, once yo
 The architecture: use my machine to record an audio file, run a transcription script, powered by faster-whisper, on a suggestion from Cursor's Composer 2.5 and finally run the transcript through a free local LLM, Ollama, to summarize it and pull out hints or action items from the conversation.
 
 A bit more detail: the pipeline is simple once it's running. Record audio to a .wav file, transcribe it locally with Whisper (I used the faster-whisper implementation), then summarize the transcript with a small open-source model running through Ollama; I'm using a 2GB Llama 3.2 build, small enough to run comfortably in the background.
-![Meeting recorder pipeline diagram](/assets/img/meeting_recorder_pipeline_diagram.svg)
 
-The next paragraph continues here.
+![Meeting recorder pipeline diagram](/assets/img/meeting_recorder_pipeline_diagram.svg)
 
 The trickier part was audio routing, which is where BlackHole comes in. macOS doesn't let you casually intercept audio between apps, so BlackHole acts as a virtual audio driver, basically a pipe you can route sound through. I use it twice, for two different jobs:
 
@@ -48,6 +47,7 @@ From that first iteration, most of the work was testing and verifying the pipeli
 
 ## From CLI to menu bar
 The first working version lived entirely in a terminal: activate a virtual environment, run the script, watch the logs. That was fine for me, but not for anyone else. Once the core pipeline was solid, the next stage was wrapping it in an actual interface: a small macOS menu bar app that opens a popup to start and stop recording, with the Python backend still doing the real work underneath. It's a small UI, but it's the difference between "a script I run" and "an app I could hand to someone else."
+
 ![Mac menu bar popup](/assets/img/menu-bar-popup.png)
 
 ## The two cents

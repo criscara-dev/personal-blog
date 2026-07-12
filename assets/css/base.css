@@ -287,3 +287,10 @@ button:hover {
 .post-meta a:hover {
   color: var(--fg);
 }
+
+.post img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-block: 1.5rem;
+}
