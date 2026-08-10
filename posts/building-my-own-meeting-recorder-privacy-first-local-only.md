@@ -70,4 +70,4 @@ If any of this is useful to you, the pipeline, the BlackHole routing trick, or j
 
 ## Updates
 
-**Aug 2026** — Added speaker diarization using [pyannote.audio](https://github.com/pyannote/pyannote-audio), suggested by Nikolay Makhov in the comments on LinkedIn. Transcripts can now label who said what (Speaker A, Speaker B, …) instead of one unlabeled stream — a real gap on longer, multi-person calls. It's optional and runs fully locally; setup and details are in the [repo README](https://github.com/criscara-dev/meeting-recorder).
+**Aug 2026** — Added speaker diarization using [pyannote.audio](https://github.com/pyannote/pyannote-audio), suggested by Nikolay Makhov in the comments on LinkedIn. Transcripts can now label who said what (Speaker A, Speaker B, …) instead of one unlabeled stream: a real gap on longer, multi-person calls. It's optional and runs fully locally; setup and details are in the [repo README](https://github.com/criscara-dev/meeting-recorder).
