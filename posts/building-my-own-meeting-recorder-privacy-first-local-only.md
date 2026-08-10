@@ -67,3 +67,7 @@ I'll also admit: in a normal context, I probably never would have spent the time
 Short version: AI is a genuinely great tool. It's going to keep improving how we build and how we learn. I recommend using it; just keep using your own brain alongside it.
 
 If any of this is useful to you, the pipeline, the BlackHole routing trick, or just the itch to build your own version instead of subscribing to one: https://github.com/criscara-dev/meeting-recorder. Let me know if you build on it.
+
+## Updates
+
+**Aug 2026** — Added speaker diarization using [pyannote.audio](https://github.com/pyannote/pyannote-audio), suggested by Nikolay Makhov in the comments on LinkedIn. Transcripts can now label who said what (Speaker A, Speaker B, …) instead of one unlabeled stream — a real gap on longer, multi-person calls. It's optional and runs fully locally; setup and details are in the [repo README](https://github.com/criscara-dev/meeting-recorder).
